@@ -22,17 +22,22 @@ export class CarsController {
                         <p>
                             <em>${car.price}</em>
                         </p>
+                        <p>
+                            <em>${car.color}</em>
+                        </p>
                     </div>
                 </div>
             </div>
             `
         })
         document.getElementById('listings').innerHTML = template
+        document.getElementById('car-fab').classList.remove('d-none')
+        document.getElementById('house-fab').classList.add('d-none')
+        document.getElementById('house-form').classList.add('d-none')
     }
 
     addCar(event){
         event.preventDefault()
-        console.log(event)
         let form = event.target
         let formData = {
             make: form.make.value,
@@ -42,7 +47,6 @@ export class CarsController {
             img: form.img.value,
             miles: form.miles.value,
         }
-        console.log(formData)
         carsService.addCar(formData)
         form.reset()
         this.toggleForm()
