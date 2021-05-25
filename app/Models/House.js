@@ -1,9 +1,11 @@
 export class House {
-  constructor(bedroom, bathroom, sqft, price, img){
-    this.bedroom = bedroom
-    this.bathroom = bathroom
-    this. sqft = sqft
+  constructor(id, bathrooms, bedrooms, levels, year, price, imgUrl){
+    this.id = id
+    this.bathrooms = bathrooms
+    this.bedrooms = bedrooms
+    this.levels = levels
+    this.year = year
     this.price = price
-    this.img = img
+    this.imgUrl = imgUrl
   }
 }

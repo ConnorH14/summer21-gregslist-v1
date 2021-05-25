@@ -4,6 +4,7 @@ import { housesService } from "../Services/HousesService.js"
 export class HousesController{
     constructor(){
         ProxyState.on('houses', this.drawHouses)
+        housesService.getHouses()
     }
 
     drawHouses(){

@@ -12,10 +12,7 @@ class AppState extends EventEmitter {
   ]
 
   /** @type {House[]} */
-  houses = [
-    new House(3, 2, 2000, 300000, "//placehold.it/500x500"),
-    new House(6, 4.5, 4000, 600000, "//placehold.it/500x500")
-  ]
+  houses = []
 
 }
 
